@@ -4,6 +4,6 @@ LABEL purpose="webapp"
 RUN apt-get update
 RUN apt-get install apache2 -y
 WORKDIR /var/www/html
-RUN ["bin/bash", "-c", "echo welcome to docker auto-build ahahahaah >>> test.html"]
+RUN ["/bin/bash", "-c", "echo welcome to docker auto-build ahahahaah >>> test.html"]
 EXPOSE 80
 CMD ["apachectl", "-DEFOREGROUND"]
